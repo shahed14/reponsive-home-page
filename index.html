@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Stick+No+Bills:wght@300&display=swap" rel="stylesheet">  <title>Frontend Mentor | QR code component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+  html , body {
+    background-color:lightgray;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    
+   }
+   .centered-div {
+    width: 250px;
+    height: 400px;
+    background-color: white;
+    border-radius: 20px;
+    text-align: center;
+    color: #000; /* Changed text color to black for visibility */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 0;
+    overflow: hidden; /* Ensures that content does not overflow the container */
+}
+
+.image-container {
+    width: 100%; /* Occupy the full width of the centered-div */
+    max-height: 60%; /* Set the maximum height for the image */
+    overflow: hidden; /* Ensure the image doesn't exceed the defined height */
+    padding: 10px; /* Add padding in all directions */
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    box-sizing: border-box;
+}
+
+
+.image {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+
+.text-container {
+max-height: 40%;
+    padding: 6px;
+    text-align: center; /* Center the text horizontally */
+    line-height: 1.4;
+    width: 100%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+
+}
+/* Styles for screens smaller than 600px (typical for mobile devices) */
+@media (max-width: 600px) {
+    .centered-div {
+        width: 90%; /* Adjust the width as needed for small screens */
+        height: auto; /* Allow the height to adjust based on content */
+        padding: 20px; /* Add padding for better spacing on small screens */
+    }
+
+    .image-container,
+    .text-container {
+        max-height: none; /* Remove the maximum height for better adaptability */
+    }
+
+    .image {
+        max-width: 100%; /* Ensure the image adjusts to the container */
+    }
+}
+
+
+
+  
+   
+  </style>
+</head>
+<body>
+  <div class="centered-div">
+    <div class="image-container">
+        <img src="images/image-qr-code.png" alt="Image" class="image">
+    </div>
+  <div class="text-container">
+    <b>Improve your front-end</b>
+    <br>
+    <b>skills by building projects</b>
+    <p style="color: lightgray; font-size: 13px;">scan the QR  code to visit frontend<br> mentor and take your coding skills to
+    <br> the next level</p>
+  </div>
+    
+</div>
+
+
+
+
+
+ 
+</body>
+</html>
